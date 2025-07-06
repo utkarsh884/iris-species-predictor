@@ -1,66 +1,63 @@
-# ML Project Deployment
+# Iris Species Predictor
 
-This project demonstrates how to deploy machine learning models using Python, covering the full workflow from model training to deployment in a production-ready environment.
+Iris Species Predictor is a Python-based machine learning application demonstrating the complete workflow of training, saving, and deploying a model to classify iris flower species. The project uses scikit-learn for modeling and Streamlit for a simple web interface.
 
 ## Overview
 
-The repository provides code and examples for preparing, saving, and deploying machine learning models, making it easier for data scientists and engineers to operationalize ML solutions. It is suitable for those interested in productionizing ML workflows and integrating models into real-world applications.
+This repository provides code and examples for preparing, saving, and deploying a machine learning model for iris species classification. It is ideal for learning how to operationalize ML workflows and deploy models with a user-friendly web interface.
 
 ## Features
 
-- Model training and evaluation in Python
-- Model serialization and export (e.g., using pickle, joblib, or ONNX)
-- Deployment scripts and examples (e.g., Flask, FastAPI, or similar frameworks)
-- Guidance on API creation for ML models
+- Model training and evaluation using Python and scikit-learn
+- Model serialization (using pickle)
+- Deployment via a Streamlit web app
+- Easy-to-use sliders for prediction inputs
 
 ## Tools Used
 
-- **Python**: Core programming language for modeling and deployment scripts
-- **Scikit-learn** or similar ML libraries: Model building and evaluation
-- **Flask**, **FastAPI**, or **Streamlit**: For creating web APIs or interfaces for deployed models
-- **Pickle**, **joblib**, or **ONNX**: Model serialization and export
-- **Docker** (optional): Containerization for production deployment
+- **Python**: Core programming language for modeling and deployment
+- **scikit-learn**: Model building and evaluation
+- **Streamlit**: Web UI for predictions
+- **pickle**: Model serialization
 
 ## Getting Started
 
 ### Prerequisites
 
 - Python 3.7+
-- pip (Python package installer)
+- pip
 
 ### Installation
 
 Clone the repository:
 ```bash
-git clone https://github.com/utkarsh884/ML-project-deployment.git
-cd ML-project-deployment
+git clone https://github.com/utkarsh884/iris-species-predictor.git
+cd iris-species-predictor
 ```
 
-Install dependencies (if a `requirements.txt` file is provided):
+Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
-Otherwise, install dependencies as specified in the project files.
 
 ### Usage
 
-1. Train and save your machine learning model using the provided scripts.
-2. Deploy the saved model using the API/server scripts (e.g., Flask/FastAPI app).
-3. Interact with the deployed model via REST API or web interface.
+1. Train and save the machine learning model using the provided scripts.
+2. Run the Streamlit app to make predictions:
+   ```bash
+   streamlit run deploy1.py
+   ```
+3. Use the web interface to input flower measurements and get species predictions.
 
 ## Project Structure
 
 - `model/` – Scripts for training and saving ML models
-- `deployment/` – API and deployment scripts
-- `requirements.txt` – Python dependencies (if available)
-
-## Contributing
-
-Contributions are welcome! Please open an issue or submit a pull request for new features, improvements, or bug fixes.
+- `deploy1.py` – Main deployment and prediction app (Streamlit)
+- `requirements.txt` – Python dependencies
 
 ## License
 
-This project is licensed under the MIT License.
+This project does not have an explicit license yet.
 
 ## Contact
 
