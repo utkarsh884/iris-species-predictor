@@ -1,59 +1,44 @@
 # Iris Species Predictor
 
-Iris Species Predictor is a Python-based machine learning application demonstrating the complete workflow of training, saving, and deploying a model to classify iris flower species. The project uses scikit-learn for modeling and Streamlit for a simple web interface.
+A Python app that trains and deploys a machine learning model to classify iris flower species. The project uses scikit-learn for modeling and Streamlit for a simple web interface.
 
-## Overview
+## Contents
 
-This repository provides code and examples for preparing, saving, and deploying a machine learning model for iris species classification. It is ideal for learning how to operationalize ML workflows and deploy models with a user-friendly web interface.
+- `deploy1.py` — Main deployment script; loads a trained model and serves a user-friendly prediction interface using Streamlit.
+- `classifier.pkl` — Pickled (serialized) machine learning model trained on iris dataset.
+- `iris_data.csv` — Dataset used for training the iris species classifier.
+- `README.md` — Project documentation.
 
 ## Features
 
-- Model training and evaluation using Python and scikit-learn
-- Model serialization (using pickle)
-- Deployment via a Streamlit web app
-- Easy-to-use sliders for prediction inputs
-
-## Tools Used
-
-- **Python**: Core programming language for modeling and deployment
-- **scikit-learn**: Model building and evaluation
-- **Streamlit**: Web UI for predictions
-- **pickle**: Model serialization
+- Trains a classifier to predict iris species from flower measurements.
+- Saves the trained model for fast, repeated predictions.
+- Provides a web-based UI for users to input measurements and get instant predictions.
 
 ## Getting Started
 
 ### Prerequisites
 
-- Python 3.7+
+- Python 3.7 or newer
 - pip
 
 ### Installation
 
-Clone the repository:
+Clone the repository and install dependencies:
 ```bash
 git clone https://github.com/utkarsh884/iris-species-predictor.git
 cd iris-species-predictor
-```
-
-Install dependencies:
-```bash
 pip install -r requirements.txt
 ```
 
 ### Usage
 
-1. Train and save the machine learning model using the provided scripts.
-2. Run the Streamlit app to make predictions:
-   ```bash
-   streamlit run deploy1.py
-   ```
-3. Use the web interface to input flower measurements and get species predictions.
-
-## Project Structure
-
-- `model/` – Scripts for training and saving ML models
-- `deploy1.py` – Main deployment and prediction app (Streamlit)
-- `requirements.txt` – Python dependencies
+1. If `classifier.pkl` is not present, train and export the model using your own script or notebook.
+2. Launch the web app:
+    ```bash
+    streamlit run deploy1.py
+    ```
+3. Enter flower measurements in the web interface to get species predictions.
 
 ## License
 
